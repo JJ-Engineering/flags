@@ -54,5 +54,10 @@
   "packageManager": "pnpm@10.19.0",
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "@statsig/react-bindings": "3.30.0",
+    "@statsig/session-replay": "3.30.0",
+    "@statsig/web-analytics": "3.30.0"
   }
 }

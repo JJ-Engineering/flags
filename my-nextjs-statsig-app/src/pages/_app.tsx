@@ -1,16 +1,20 @@
-import { AppProps } from 'next/app';
-import { StatsigProvider } from 'statsig-react';
-import { useEffect } from 'react';
+import { LogLevel, StatsigProvider } from '@statsig/react-bindings';
+import type { AppProps } from 'next/app';
 
 const StatsigApp = ({ Component, pageProps }: AppProps) => {
-  useEffect(() => {
-    // Initialize Statsig SDK here if needed
-  }, []);
+  const user = {
+    userID: 'a-user',
+    // Optional additional fields:
+    // email: 'user@example.com',
+    // customIDs: { internalID: 'internal-123' },
+    // custom: { plan: 'premium' }
+  };
 
   return (
     <StatsigProvider
-      clientKey={process.env.NEXT_PUBLIC_STATSIG_CLIENT_KEY}
-      user={{}} // Provide user information if available
+      sdkKey={process.env.NEXT_PUBLIC_STATSIG_CLIENT_KEY!}
+      user={user}
+      options={{ logLevel: LogLevel.Debug }}
     >
       <Component {...pageProps} />
     </StatsigProvider>

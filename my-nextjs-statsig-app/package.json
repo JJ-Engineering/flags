@@ -11,7 +11,9 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "@statsig/sdk": "latest"
+    "@statsig/react-bindings": "latest",
+    "@statsig/session-replay": "latest",
+    "@statsig/web-analytics": "latest"
   },
   "devDependencies": {
     "typescript": "latest",

@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next';
 import { VercelToolbar } from '@vercel/toolbar/next';
 import type { Metadata } from 'next';
+import type React from 'react';
 import { Toaster } from 'sonner';
 
 import './globals.css';
